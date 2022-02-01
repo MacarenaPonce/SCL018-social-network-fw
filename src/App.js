@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Login from './Component/Views/Login';
+import SignUp from './Component/Views/SignUp';
+import TimeLine from './Component/Views/TimeLine';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> Holi
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path='/' exact>
+          <Login/>
+        </Route>
+        <Route path='/SignUp'>
+          <SignUp/>
+        </Route>
+        <Route path='/TimeLine'>
+          <TimeLine/>
+        </Route>
+      </Switch>
+    </Router>
+    
   );
 }
 
