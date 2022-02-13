@@ -1,29 +1,33 @@
-import './App.css';
+import React from 'react';
+import RegisterApp from './views/compRegister';
+import LogApp from './views/compLog';
+import ShowApp from './views/compPosts';
+import NameApp from './views/compNameapp';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
-} from "react-router-dom";
-import Login from './Component/Views/Login';
-import SignUp from './Component/Views/SignUp';
-import TimeLine from './Component/Views/TimeLine';
-function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route path='/' exact>
-          <Login/>
-        </Route>
-        <Route path='/SignUp'>
-          <SignUp/>
-        </Route>
-        <Route path='/TimeLine'>
-          <TimeLine/>
-        </Route>
-      </Switch>
-    </Router>
-    
-  );
-}
+  Route,
+} from 'react-router-dom';
 
-export default App;
+
+const RouterScreen = () => {
+  return (
+    <>
+      <Router>
+      <NameApp />
+        <Switch>
+          <Route path="/" exact>
+            <RegisterApp/>
+          </Route>
+          <Route path="/login" exact>
+             <LogApp />
+          </Route>
+          <Route path="/post" exact>
+            <ShowApp />
+          </Route>
+        </Switch>
+      </Router>
+    </>
+  )
+}
+export default RouterScreen;

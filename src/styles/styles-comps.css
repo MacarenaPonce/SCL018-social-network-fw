@@ -1,0 +1,43 @@
+*{
+    background-color: rgb(253, 253, 253);
+}
+
+.name-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 5%;
+}
+
+#linkLog, #linkRegs{
+    color: rgb(0, 17, 255);
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-style: inherit;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.general-container {
+    display: flex;
+    
+}
+
+.login-container, .submit-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.form-group, .submit-button {
+    margin-top: 10%;
+}
